@@ -13,3 +13,18 @@ D:\KIET0904\vscode test\obj\Debug\net6.0\refint\vscode test.dll
 D:\KIET0904\vscode test\obj\Debug\net6.0\vscode test.pdb
 D:\KIET0904\vscode test\obj\Debug\net6.0\vscode test.genruntimeconfig.cache
 D:\KIET0904\vscode test\obj\Debug\net6.0\ref\vscode test.dll
+D:\KIET0904\test1\bin\Debug\net6.0\vscode test.exe
+D:\KIET0904\test1\bin\Debug\net6.0\vscode test.deps.json
+D:\KIET0904\test1\bin\Debug\net6.0\vscode test.runtimeconfig.json
+D:\KIET0904\test1\bin\Debug\net6.0\vscode test.dll
+D:\KIET0904\test1\bin\Debug\net6.0\vscode test.pdb
+D:\KIET0904\test1\obj\Debug\net6.0\vscode test.csproj.AssemblyReference.cache
+D:\KIET0904\test1\obj\Debug\net6.0\vscode test.GeneratedMSBuildEditorConfig.editorconfig
+D:\KIET0904\test1\obj\Debug\net6.0\vscode test.AssemblyInfoInputs.cache
+D:\KIET0904\test1\obj\Debug\net6.0\vscode test.AssemblyInfo.cs
+D:\KIET0904\test1\obj\Debug\net6.0\vscode test.csproj.CoreCompileInputs.cache
+D:\KIET0904\test1\obj\Debug\net6.0\vscode test.dll
+D:\KIET0904\test1\obj\Debug\net6.0\refint\vscode test.dll
+D:\KIET0904\test1\obj\Debug\net6.0\vscode test.pdb
+D:\KIET0904\test1\obj\Debug\net6.0\vscode test.genruntimeconfig.cache
+D:\KIET0904\test1\obj\Debug\net6.0\ref\vscode test.dll
