@@ -43,6 +43,35 @@ namespace DataBase
 
             }
         }
+        static void CourseOuput(string coursename,int year,string season)
+        {
+            foreach(Course course in courses)
+            {
+                if (coursename==course.coursename)
+                {
+                    foreach(Section section in sections)
+                    {
+                        if (course.coursenumber==section.course.coursenumber && year==section.year && season==section.semester )
+                        {
+                            foreach(GradeReport gradereport in gradereports)
+                            {
+                                if (section.sectionindentitier==gradereport.section.sectionindentitier)
+                                {
+                                    foreach(Student student in students)
+                                    {
+                                        if (gradereport.student.name==student.name)
+                                        {
+                                            Console.WriteLine(student.name);
+                                            Console.WriteLine(gradereport.grade);
+                                        }
+                                    }
+                                }                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
         static void Main()
         {
             // ENTER STUDENT============================
@@ -93,9 +122,9 @@ namespace DataBase
             prerequisites.AddLast(y);
             prerequisites.AddLast(z);
             //Xuất danh sách tất cả các khóa học và điểm của ‘Smith’
-            SmithOutput("Brown");
+            //SmithOutput("Brown");
             // Liệt kê tên của những sinh viên đã học học phần khóa học 'Cơ sở dữ liệu' vào mùa thu năm 2008 và điểm tương ứng của các sinh viên đó
-
+            CourseOuput("Database",08,"Fall");
         }
     }
 }
