@@ -72,6 +72,33 @@ namespace DataBase
                 }
             }
         }
+        static void PrerequisiteOutput(string coursename)
+        {
+           foreach(Course course in courses)
+           {
+            if (coursename==course.coursename)
+            {
+                foreach(Prerequisite prerequisite in prerequisites)
+                {
+                    if(course.coursenumber==prerequisite.course.coursenumber)
+                    {
+                        foreach(Course course1 in courses)
+                        {
+                            if (prerequisite.prerequisitenumber==course1.coursenumber)
+                            {
+                                Console.WriteLine(course1.coursename);
+                            }
+                        }
+                    }
+                    else 
+                        {
+                            Console.WriteLine("This Course have no preresiquite or are not exist"); 
+                            break;
+                        }
+                }
+            } 
+           }
+        }
         static void Main()
         {
             // ENTER STUDENT============================
@@ -81,7 +108,7 @@ namespace DataBase
             students.AddLast(brown);
             //ENTER COURSE ===================================
             Course itcs = new Course("Intro to Computer Science", "CS1310", 4, "CS");
-            Course ds = new Course("Data Structer", "CS3320", 4, "CS");
+            Course ds = new Course("Data Structures", "CS3320", 4, "CS");
             Course dm = new Course("Discrete Mathematics", "MATH2410", 3, "MATH");
             Course db = new Course("Database", "CS3380", 3, "CS");
             courses.AddLast(itcs);
@@ -122,9 +149,11 @@ namespace DataBase
             prerequisites.AddLast(y);
             prerequisites.AddLast(z);
             //Xuất danh sách tất cả các khóa học và điểm của ‘Smith’
-            //SmithOutput("Brown");
+                //SmithOutput("Brown");
             // Liệt kê tên của những sinh viên đã học học phần khóa học 'Cơ sở dữ liệu' vào mùa thu năm 2008 và điểm tương ứng của các sinh viên đó
-            CourseOuput("Database",08,"Fall");
+                //CourseOuput("Database",08,"Fall");
+            //Liệt kê các điều kiện tiên quyết của khóa học 'Cơ sở dữ liệu'
+                PrerequisiteOutput("Database");
         }
     }
 }
