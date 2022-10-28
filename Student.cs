@@ -13,6 +13,6 @@ class Student
     }
     public void Output()
     {
-        Console.WriteLine($"{name}");
+        Console.WriteLine($"{name}\t{studentnumber}\t{classstudent}\t{major}");
     }
 }

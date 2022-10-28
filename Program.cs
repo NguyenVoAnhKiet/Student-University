@@ -99,6 +99,11 @@ namespace DataBase
             } 
            }
         }
+        static int SmithChangeClass(Student  x,int n)
+        {
+            return x.classstudent=n;
+            
+        }
         static void Main()
         {
             // ENTER STUDENT============================
@@ -151,9 +156,12 @@ namespace DataBase
             //Xuất danh sách tất cả các khóa học và điểm của ‘Smith’
                 //SmithOutput("Brown");
             // Liệt kê tên của những sinh viên đã học học phần khóa học 'Cơ sở dữ liệu' vào mùa thu năm 2008 và điểm tương ứng của các sinh viên đó
-                //CourseOuput("Database",08,"Fall");
+                //CourseOuput("Intro to Computer Science",08,"Fall");
             //Liệt kê các điều kiện tiên quyết của khóa học 'Cơ sở dữ liệu'
-                PrerequisiteOutput("Database");
+                //PrerequisiteOutput("Database");
+            // Thay đổi lớp của ‘Smith’ bằng 2
+                SmithChangeClass(smith,2);
+                smith.Output();
         }
     }
 }
