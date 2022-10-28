@@ -110,6 +110,26 @@ namespace DataBase
             sections.AddLast(temp);
             temp.Output();
         }
+        static string ChangeGrade(GradeReport student, string grade )
+        {
+            return student.grade=grade;
+        }
+        static void EnterGrade(Student studentname,Course coursename ,string season,int year,string score)
+        {
+            foreach(GradeReport grade in gradereports)
+            {
+                if(studentname.name==grade.student.name)
+                {
+                    foreach(Section section in sections)
+                    {
+                        if(grade.section.sectionindentitier==section.sectionindentitier && coursename.coursenumber==section.course.coursenumber && season==section.semester && year==section.year)
+                        {
+                            ChangeGrade(grade,score);
+                        }
+                    }
+                }
+            }
+        }
         static void Main()
         {
             // ENTER STUDENT============================
@@ -166,11 +186,15 @@ namespace DataBase
             //Liệt kê các điều kiện tiên quyết của khóa học 'Cơ sở dữ liệu'
                 //PrerequisiteOutput("Database");
             // Thay đổi lớp của ‘Smith’ bằng 2
-                SmithChangeClass(smith,2);
+                //SmithChangeClass(smith,2);
                 //smith.Output();
             // Tạo một học phần mới cho khóa học 'Cơ sở dữ liệu' cho học kỳ này
-                CreateSection(150,db,"Summer",10,"Tony");
-
+                //CreateSection(150,db,"Summer",10,"Tony");
+            // Nhập điểm ‘A’ cho ‘Smith’ trong học phần ‘Cơ sở dữ liệu’ của học kỳ Mùa Thu - 2008
+                GradeReport g=new GradeReport(smith,s6,"B");
+                gradereports.AddLast(g);
+                EnterGrade(smith,db,"Fall",08,"F");
+                SmithOutput("Smith");
         }
     }
 }
