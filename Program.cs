@@ -104,6 +104,12 @@ namespace DataBase
             return x.classstudent=n;
             
         }
+        static void CreateSection(int sectionindentitier, Course coursenumber, string semester, int year, string instructor)
+        {
+            Section temp=new Section( sectionindentitier,  coursenumber,  semester,  year,  instructor);
+            sections.AddLast(temp);
+            temp.Output();
+        }
         static void Main()
         {
             // ENTER STUDENT============================
@@ -161,7 +167,10 @@ namespace DataBase
                 //PrerequisiteOutput("Database");
             // Thay đổi lớp của ‘Smith’ bằng 2
                 SmithChangeClass(smith,2);
-                smith.Output();
+                //smith.Output();
+            // Tạo một học phần mới cho khóa học 'Cơ sở dữ liệu' cho học kỳ này
+                CreateSection(150,db,"Summer",10,"Tony");
+
         }
     }
 }

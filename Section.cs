@@ -17,5 +17,6 @@ class Section
         {
             Console.WriteLine($"{sectionindentitier}");
             course.Output();
+            Console.WriteLine($"{semester}\n{year}\n{instructor}");
         }
     }
